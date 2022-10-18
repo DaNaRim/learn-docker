@@ -1,0 +1,9 @@
+FROM openjdk:17
+
+WORKDIR /var/tmp/docker-test
+
+COPY src/Main.java Main.java
+
+RUN javac Main.java
+
+CMD java Main

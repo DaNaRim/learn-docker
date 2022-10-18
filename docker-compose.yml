@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    container_name: db
+    image: postgres:9.6
+    environment:
+      POSTGRES_PASSWORD: A8Z4m9D88aBqgnOXj6mD
+  app:
+    container_name: app
+    depends_on:
+      - db
+    build: .
